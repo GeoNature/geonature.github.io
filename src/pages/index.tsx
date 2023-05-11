@@ -1,15 +1,7 @@
-import Head from "next/head";
 import { FC, PropsWithChildren } from "react";
+import Head from "next/head";
 
-const Section: FC<PropsWithChildren<{ title?: string }>> = ({
-  title,
-  children,
-}) => (
-  <section>
-    {title && <h2>{title}</h2>}
-    {children}
-  </section>
-);
+import Section from "@/components/presentation/section";
 
 const Feature: FC<PropsWithChildren<{ title?: string }>> = ({
   title,
@@ -45,7 +37,7 @@ export default function Home() {
         <Section title="En bref">
           <Feature title="Chaine de travail">
             De la gestion de référentiels en passant par les bases de données
-            scientifiques jusqu'à la synthèse et la diffusion des données.
+            scientifiques jusqu&apos;à la synthèse et la diffusion des données.
           </Feature>
           <Feature title="Mobile">
             GeoNature-mobile et Occtax-mobile permettent de saisir les données
@@ -57,17 +49,18 @@ export default function Home() {
           </Feature>
           <Feature title="Collaboratif">
             GeoNature est développé par plusieurs parcs nationaux et la
-            communauté des utilisateurs et développeurs continue de s'étendre.
+            communauté des utilisateurs et développeurs continue de
+            s&apos;étendre.
           </Feature>
         </Section>
         <Section title="L'architecture">
           <p>
-            GeoNature comprend un ensemble d'outils développés par les parcs
-            nationaux de France et disponibles sous licence libre.
+            GeoNature comprend un ensemble d&apos;outils développés par les
+            parcs nationaux de France et disponibles sous licence libre.
           </p>
           <p>
             Chaque outil peut être téléchargé et installé indépendamment :
-            GeoNature (pour la saisie web, la consultation et l'export des
+            GeoNature (pour la saisie web, la consultation et l&apos;export des
             données), Occtax-mobile (pour la saisie mobile dans Occtax),
             GeoNature-atlas (pour la diffusion des données), GeoNature-citizen
             (pour la collecte citoyenne ouverte de données), TaxHub (pour la

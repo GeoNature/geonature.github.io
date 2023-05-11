@@ -35,7 +35,7 @@ const NavLiLink: FC<PropsWithChildren<NavLiLinkProps>> = ({
 
 const Header: FC = () => (
   <nav className="navbar navbar-expand-lg bg-white shadow-sm mb-3">
-    <div className="container-fluid">
+    <div className="container">
       <Link href="/" className="navbar-brand">
         GeoNature
       </Link>
@@ -57,7 +57,10 @@ const Header: FC = () => (
           <NavLiLink href="/" exact>
             Home
           </NavLiLink>
+          <NavLiLink href="/fonctionnalites">Fonctionnalités</NavLiLink>
           <NavLiLink href="/ressources">Ressources</NavLiLink>
+          <NavLiLink href="/code">Code et Téléchargement</NavLiLink>
+          <NavLiLink href="/contact">Contact</NavLiLink>
         </ul>
       </div>
     </div>
