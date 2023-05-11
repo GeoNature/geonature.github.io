@@ -1,7 +1,7 @@
+import clsx from "clsx";
 import React, { FC, PropsWithChildren } from "react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
-import clsx from "clsx";
 
 interface NavLiLinkProps extends LinkProps {
   href: string;
@@ -34,9 +34,10 @@ const NavLiLink: FC<PropsWithChildren<NavLiLinkProps>> = ({
 };
 
 const Header: FC = () => (
-  <nav className="navbar navbar-expand-lg bg-white shadow-sm mb-3">
+  <nav className="navbar navbar-expand-lg bg-white shadow-sm">
     <div className="container">
       <Link href="/" className="navbar-brand">
+        <img src="/logo.png" height={30} className="me-1" alt="TODO" />
         GeoNature
       </Link>
 
@@ -57,9 +58,9 @@ const Header: FC = () => (
           <NavLiLink href="/" exact>
             Home
           </NavLiLink>
-          <NavLiLink href="/fonctionnalites">Fonctionnalités</NavLiLink>
+          <NavLiLink href="/produit">Découvrir GeoNature</NavLiLink>
           <NavLiLink href="/ressources">Ressources</NavLiLink>
-          <NavLiLink href="/code">Code et Téléchargement</NavLiLink>
+          <NavLiLink href="/code">Code et Démo</NavLiLink>
           <NavLiLink href="/contact">Contact</NavLiLink>
         </ul>
       </div>

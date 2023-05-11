@@ -4,8 +4,9 @@
 // scss-docs-start import-stack
 // Configuration
 @import "bootstrap/scss/functions";
-@import "custom";
+@import "overrides";
 @import "bootstrap/scss/variables";
+@import "custom";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";

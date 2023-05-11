@@ -1,0 +1,15 @@
+$custom-spacers: (
+  6: $spacer * 6,
+  7: $spacer * 8,
+  8: $spacer * 10,
+);
+
+$spacers: map-merge($spacers, $custom-spacers);
+
+.bg-hero {
+  background-color: rgba($primary, 0.3);
+  background-image: url("/images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

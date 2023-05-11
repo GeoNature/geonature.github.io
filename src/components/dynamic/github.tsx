@@ -1,12 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import useSWR from "swr";
 
 const GITHUB_URL =
   "https://api.github.com/search/repositories?q=user%3Apnx-si&sort=updated&order=desc";
 
-const Repository = ({ repository }) => {
+type Repository = any;
+type Repositories = Repository[];
+type Response = {
+  total_count: number;
+  incomplete_results: boolean;
+  items: Repositories;
+};
+
+const Repository: FC<{ repository: Repository }> = ({ repository }) => {
   return (
-    <div className="col-sm-6 col-md-4 mb-4">
+    <div className="col-sm-6 col-sm-4 col-md-3">
       <div className="card">
         <div className="card-body">
           <div className="card-title">
@@ -37,11 +45,11 @@ const Repository = ({ repository }) => {
   );
 };
 
-const Repositories = ({ repositories }) => {
+const Repositories: FC<{ repositories: Repositories }> = ({ repositories }) => {
   return (
     <div className="Repositories">
-      <div className="row">
-        {repositories.items.map((repository) => (
+      <div className="row g-3">
+        {repositories.map((repository) => (
           <Repository key={repository.id} repository={repository} />
         ))}
       </div>
@@ -50,11 +58,11 @@ const Repositories = ({ repositories }) => {
 };
 
 const GitHub = () => {
-  const { data, error, isValidating } = useSWR(GITHUB_URL);
+  const { data, error, isValidating } = useSWR<Response>(GITHUB_URL);
 
-  if (isValidating) <span>Loading</span>;
+  if (isValidating) return <span>Loading</span>;
   else if (error) return <span>Error</span>;
-  else if (data) return <Repositories repositories={data} />;
+  else if (!!data) return <Repositories repositories={data.items} />;
   else return null;
 };
 

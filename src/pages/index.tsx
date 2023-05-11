@@ -1,21 +1,27 @@
-import { FC, PropsWithChildren } from "react";
+import clsx from "clsx";
 import Head from "next/head";
+import Link from "next/link";
+import { FC, PropsWithChildren } from "react";
 
+import Page from "@/layout/page";
 import Section from "@/components/presentation/section";
+import Feature from "@/components/presentation/feature";
 
-const Feature: FC<PropsWithChildren<{ title?: string }>> = ({
-  title,
-  children,
-}) => (
-  <div>
-    {title && <h3>{title}</h3>}
+const HomeLinkButton: FC<
+  PropsWithChildren<{ href: string; className?: string }>
+> = ({ href, className, children }) => (
+  <Link
+    href={href}
+    role="button"
+    className={clsx(className, "btn btn-primary me-2 mb-2")}
+  >
     {children}
-  </div>
+  </Link>
 );
 
 export default function Home() {
   return (
-    <>
+    <Page noContainer>
       <Head>
         <title>GeoNature</title>
         <meta
@@ -26,49 +32,76 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Section>
-          <h1>GeoNature</h1>
-          <p>Un outil open source développé par les parcs nationaux français</p>
-          <p>
-            Une application WEB et mobile pour saisir, gérer et diffuser des
-            données faune et flore
+        <Section title="GeoNature" hero>
+          <p className="lead">
+            Un outil open source développé par les parcs nationaux français,
+            <br /> pour saisir, gérer et diffuser des données faune et flore
           </p>
+          <ul className="list-unstyled d-flex mb-0">
+            <li>
+              <HomeLinkButton
+                href="#"
+                className="btn-primary text-white btn-lg"
+              >
+                Découvrir GeoNature
+              </HomeLinkButton>
+            </li>
+            <li>
+              <HomeLinkButton
+                href="#"
+                className="btn-primary text-white btn-lg"
+              >
+                Tester GeoNature
+              </HomeLinkButton>
+            </li>
+          </ul>
+          <ul className="list-unstyled d-flex mb-0">
+            <li>
+              <HomeLinkButton href="#" className="btn-light">
+                Documentation
+              </HomeLinkButton>
+            </li>
+            <li>
+              <HomeLinkButton href="#" className="btn-light">
+                Code source
+              </HomeLinkButton>
+            </li>
+          </ul>
         </Section>
-        <Section title="En bref">
-          <Feature title="Chaine de travail">
-            De la gestion de référentiels en passant par les bases de données
-            scientifiques jusqu&apos;à la synthèse et la diffusion des données.
-          </Feature>
-          <Feature title="Mobile">
-            GeoNature-mobile et Occtax-mobile permettent de saisir les données
-            faune et flore directement sur le terrain.
-          </Feature>
-          <Feature title="Open source">
-            GeoNature, UsersHub, TaxHub, GeoNature-atlas et GeoNature-citizen
-            sont disponibles sous licence libre sur Github.
-          </Feature>
-          <Feature title="Collaboratif">
-            GeoNature est développé par plusieurs parcs nationaux et la
-            communauté des utilisateurs et développeurs continue de
-            s&apos;étendre.
-          </Feature>
-        </Section>
-        <Section title="L'architecture">
-          <p>
-            GeoNature comprend un ensemble d&apos;outils développés par les
-            parcs nationaux de France et disponibles sous licence libre.
-          </p>
-          <p>
-            Chaque outil peut être téléchargé et installé indépendamment :
-            GeoNature (pour la saisie web, la consultation et l&apos;export des
-            données), Occtax-mobile (pour la saisie mobile dans Occtax),
-            GeoNature-atlas (pour la diffusion des données), GeoNature-citizen
-            (pour la collecte citoyenne ouverte de données), TaxHub (pour la
-            gestion de la taxonomie à partir de Taxref), UsersHub (pour la
-            gestion des utilisateurs et de leurs droits).
-          </p>
-        </Section>
+        <div className="container mb-5">
+          <Section title="En bref">
+            <div className="row">
+              <div className="col-md-3">
+                <Feature title="Chaine de travail" iconName="dataProcessing">
+                  De la gestion de référentiels en passant par les bases de
+                  données scientifiques jusqu&apos;à la synthèse et la diffusion
+                  des données.
+                </Feature>
+              </div>
+              <div className="col-md-3">
+                <Feature title="Mobile" iconName="natureOnScreen">
+                  GeoNature-mobile et Occtax-mobile permettent de saisir les
+                  données faune et flore directement sur le terrain.
+                </Feature>
+              </div>
+              <div className="col-md-3">
+                <Feature title="Open source" iconName="codeReview">
+                  GeoNature, UsersHub, TaxHub, GeoNature-atlas et
+                  GeoNature-citizen sont disponibles sous licence libre sur
+                  Github.
+                </Feature>
+              </div>
+              <div className="col-md-3">
+                <Feature title="Collaboratif" iconName="collaborators">
+                  GeoNature est développé par plusieurs parcs nationaux et la
+                  communauté des utilisateurs et développeurs continue de
+                  s&apos;étendre.
+                </Feature>
+              </div>
+            </div>
+          </Section>
+        </div>
       </main>
-    </>
+    </Page>
   );
 }

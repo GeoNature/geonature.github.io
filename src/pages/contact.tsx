@@ -1,8 +1,9 @@
+import Page from "@/layout/page";
 import Section from "@/components/presentation/section";
 
 export default function Contact() {
   return (
-    <>
+    <Page>
       <main>
         <h1>Contact</h1>
         <Section title="Des questions?">
@@ -52,6 +53,6 @@ export default function Contact() {
           </p>
         </Section>
       </main>
-    </>
+    </Page>
   );
 }
