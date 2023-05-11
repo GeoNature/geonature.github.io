@@ -1,6 +1,19 @@
-import "@/styles/global.scss";
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 
+import Header from "@/components/header";
+
+import "@/styles/global.scss";
+
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  useEffect(() => {
+    import("bootstrap");
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+    </>
+  );
 }
