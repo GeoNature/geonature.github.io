@@ -1,11 +1,11 @@
-import Page from "@/layout/page";
-import Section from "@/components/presentation/section";
+import Page from "@/layout/Page";
+import Section from "@/components/presentation/Section";
 
 export default function Produit() {
   return (
     <Page>
       <main>
-        <h1>Découvrir GeoNature</h1>
+        <Section title="Découvrir GeoNature" hero></Section>
         <Section title="L'architecture">
           <p>
             GeoNature comprend un ensemble d&apos;outils développés par les

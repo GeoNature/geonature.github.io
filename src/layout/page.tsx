@@ -1,9 +1,6 @@
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 
-const Page: FC<PropsWithChildren<{ noContainer?: boolean }>> = ({
-  noContainer,
-  children,
-}) => <div className={clsx(!noContainer && "container my-5")}>{children}</div>;
+const Page: FC<PropsWithChildren> = ({ children }) => <div>{children}</div>;
 
 export default Page;

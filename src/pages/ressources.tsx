@@ -1,10 +1,11 @@
-import Page from "@/layout/page";
+import Page from "@/layout/Page";
+import Section from "@/components/presentation/Section";
 
 export default function Ressources() {
   return (
     <Page>
       <main>
-        <h1>Ressources</h1>
+        <Section title="Ressources" hero></Section>
       </main>
     </Page>
   );

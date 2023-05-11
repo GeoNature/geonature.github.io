@@ -3,9 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 
-import Page from "@/layout/page";
-import Section from "@/components/presentation/section";
-import Feature from "@/components/presentation/feature";
+import Page from "@/layout/Page";
+import Section from "@/components/presentation/Section";
+import Feature from "@/components/presentation/Feature";
 
 const HomeLinkButton: FC<
   PropsWithChildren<{ href: string; className?: string }>
@@ -21,7 +21,7 @@ const HomeLinkButton: FC<
 
 export default function Home() {
   return (
-    <Page noContainer>
+    <Page>
       <Head>
         <title>GeoNature</title>
         <meta
@@ -32,7 +32,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Section title="GeoNature" hero>
+        <Section title="GeoNature" hero heroImage="/images/banners/hero.jpg">
           <p className="lead">
             Un outil open source développé par les parcs nationaux français,
             <br /> pour saisir, gérer et diffuser des données faune et flore

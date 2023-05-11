@@ -1,11 +1,15 @@
-import Page from "@/layout/page";
-import Section from "@/components/presentation/section";
+import Page from "@/layout/Page";
+import Section from "@/components/presentation/Section";
 
 export default function Contact() {
   return (
     <Page>
       <main>
-        <h1>Contact</h1>
+        <Section
+          title="Contact"
+          hero
+          heroImage="/images/banners/marek-piwnicki-ZBvUxUvWwFw-unsplash.jpg"
+        />
         <Section title="Des questions?">
           <p>
             Contactez l'équipe du pôle Système d'Informations du Parc national

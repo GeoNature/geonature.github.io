@@ -60,7 +60,7 @@ const Header: FC = () => (
           </NavLiLink>
           <NavLiLink href="/produit">Découvrir GeoNature</NavLiLink>
           <NavLiLink href="/ressources">Ressources</NavLiLink>
-          <NavLiLink href="/code">Code et Démo</NavLiLink>
+          <NavLiLink href="/demo">Démo et Code</NavLiLink>
           <NavLiLink href="/contact">Contact</NavLiLink>
         </ul>
       </div>

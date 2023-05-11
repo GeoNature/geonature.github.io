@@ -7,9 +7,9 @@ $custom-spacers: (
 $spacers: map-merge($spacers, $custom-spacers);
 
 .bg-hero {
+  // background-image provided by inline style tags
   background-color: rgba($primary, 0.3);
-  background-image: url("/images/hero.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
