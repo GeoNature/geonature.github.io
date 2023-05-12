@@ -9,16 +9,24 @@ const Section: FC<
     title?: string;
     hero?: boolean;
     alternate?: boolean;
+    noContainer?: boolean;
     heroImage?: string;
   }>
-> = ({ title, children, hero = false, alternate = false, heroImage }) => (
+> = ({
+  title,
+  children,
+  hero = false,
+  alternate = false,
+  noContainer = false,
+  heroImage,
+}) => (
   <div
     className={clsx(hero && "bg-hero", alternate && "bg-light")}
     style={hero && heroImage ? { backgroundImage: `url(${heroImage})` } : {}}
   >
     <section
       className={clsx(
-        "container",
+        !noContainer && "container",
         hero ? (heroImage ? "py-8" : "py-6") : "py-4 my-4"
       )}
     >
