@@ -3,8 +3,8 @@ import { SWRConfig } from "swr";
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
 
-import Header from "@/layout/header";
-import Footer from "@/layout/footer";
+import Header from "@/layout/Header";
+import Footer from "@/layout/Footer";
 
 import "@/styles/global.scss";
 

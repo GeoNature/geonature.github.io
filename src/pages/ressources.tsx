@@ -5,7 +5,11 @@ export default function Ressources() {
   return (
     <Page>
       <main>
-        <Section title="Ressources" hero></Section>
+        <Section
+          title="Ressources"
+          hero
+          heroImage="/images/banners/benoit-gauzere-9bMgZ9jbsW4-unsplash.jpg"
+        ></Section>
       </main>
     </Page>
   );

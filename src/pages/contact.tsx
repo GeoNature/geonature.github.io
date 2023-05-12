@@ -12,8 +12,8 @@ export default function Contact() {
         />
         <Section title="Des questions?">
           <p>
-            Contactez l'équipe du pôle Système d'Informations du Parc national
-            des Ecrins
+            Contactez l&apos;équipe du pôle Système d&apos;Informations du Parc
+            national des Ecrins
           </p>
           <dl>
             <dt>Par appel</dt>
@@ -30,11 +30,11 @@ export default function Contact() {
             .
           </p>
         </Section>
-        <Section title="Discussions">
+        <Section title="Discussions" alternate>
           <p>
             Inscrivez-vous à{" "}
             <a href="https://framalistes.org/sympa/info/geonature-info">
-              la liste de discussion d'information générale du projet
+              la liste de discussion d&apos;information générale du projet
             </a>
             .
           </p>
