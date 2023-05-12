@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 
 import Page from "@/layout/Page";
@@ -8,6 +9,9 @@ import ScreenshotCard from "@/components/presentation/ScreenshotCard";
 export default function Demo() {
   return (
     <Page>
+      <Head>
+        <title>Demo</title>
+      </Head>
       <main>
         <Section
           title="Code et Démo"

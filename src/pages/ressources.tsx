@@ -1,9 +1,14 @@
+import Head from "next/head";
+
 import Page from "@/layout/Page";
 import Section from "@/components/presentation/Section";
 
 export default function Ressources() {
   return (
     <Page>
+      <Head>
+        <title>Ressources</title>
+      </Head>
       <main>
         <Section
           title="Ressources"
@@ -89,7 +94,7 @@ export default function Ressources() {
             </li>
             <li>
               <a href="https://biodiversite.ecrins-parcnational.fr">
-                Biodiv'Ecrins, démonstration de GeoNature-atlas
+                Biodiv&apos;Ecrins, démonstration de GeoNature-atlas
               </a>
             </li>
             <li>
@@ -123,7 +128,7 @@ export default function Ressources() {
             </li>
             <li>
               <a href="https://obs.mercantour-parcnational.fr">
-                Obs'Mercantour, démonstration de GeoNature-citizen
+                Obs&apos;Mercantour, démonstration de GeoNature-citizen
               </a>
             </li>
             <li>

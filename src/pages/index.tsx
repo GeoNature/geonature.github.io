@@ -81,29 +81,7 @@ export default function Home() {
             </li>
           </ul>
         </Section>
-        <Section title="En bref">
-          <div className="row row-cols-sm-2 row-cols-md-4">
-            <Feature title="Chaine de travail" iconName="dataProcessing">
-              De la gestion de référentiels en passant par les bases de données
-              scientifiques jusqu&apos;à la synthèse et la diffusion des
-              données.
-            </Feature>
-            <Feature title="Mobile" iconName="natureOnScreen">
-              GeoNature-mobile et Occtax-mobile permettent de saisir les données
-              faune et flore directement sur le terrain.
-            </Feature>
-            <Feature title="Open source" iconName="codeReview">
-              GeoNature, UsersHub, TaxHub, GeoNature-atlas et GeoNature-citizen
-              sont disponibles sous licence libre sur Github.
-            </Feature>
-            <Feature title="Collaboratif" iconName="collaborators">
-              GeoNature est développé par plusieurs parcs nationaux et la
-              communauté des utilisateurs et développeurs continue de
-              s&apos;étendre.
-            </Feature>
-          </div>
-        </Section>
-        <Section title="À propos" alternate>
+        <Section title="À propos">
           <p className="lead">
             Un système d&apos;information complet de la collecte à la gestion
             des données naturalistes.
@@ -131,7 +109,29 @@ export default function Home() {
             <li>La diffusion des données sur un portail web grand public</li>
           </ul>
         </Section>
-        <Section title="Utilisateurs">
+        <Section title="En bref">
+          <div className="row row-cols-sm-2 row-cols-md-4">
+            <Feature title="Chaine de travail" iconName="dataProcessing">
+              De la gestion de référentiels en passant par les bases de données
+              scientifiques jusqu&apos;à la synthèse et la diffusion des
+              données.
+            </Feature>
+            <Feature title="Mobile" iconName="natureOnScreen">
+              GeoNature-mobile et Occtax-mobile permettent de saisir les données
+              faune et flore directement sur le terrain.
+            </Feature>
+            <Feature title="Open source" iconName="codeReview">
+              GeoNature, UsersHub, TaxHub, GeoNature-atlas et GeoNature-citizen
+              sont disponibles sous licence libre sur Github.
+            </Feature>
+            <Feature title="Collaboratif" iconName="collaborators">
+              GeoNature est développé par plusieurs parcs nationaux et la
+              communauté des utilisateurs et développeurs continue de
+              s&apos;étendre.
+            </Feature>
+          </div>
+        </Section>
+        <Section title="Utilisateurs" alternate>
           <p className="lead">
             GeoNature est utilisé partout en France. Consultez la{" "}
             <a
