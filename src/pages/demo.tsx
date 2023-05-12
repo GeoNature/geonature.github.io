@@ -89,19 +89,12 @@ export default function Demo() {
         <Section title="Code" alternate>
           <p>
             Le code et les téléchargements se trouvent sur{" "}
-            <a href="https://github.com/PnX-SI">
-              les dépôts GitHub <strong>PnX-SI</strong>
+            <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}>
+              les dépôts GitHub.
             </a>
             . Voici les dépôts récemment mis à jour :
           </p>
           <GitHub />
-          <Link
-            href="https://github.com/PnX-SI"
-            className="btn btn-lg btn-secondary mt-3"
-            role="button"
-          >
-            GitHub (PnX-SI)
-          </Link>
         </Section>
       </main>
     </Page>

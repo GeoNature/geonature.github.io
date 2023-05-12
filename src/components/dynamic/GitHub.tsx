@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import useSWR from "swr";
 
-const GITHUB_URL =
-  "https://api.github.com/search/repositories?q=user%3Apnx-si&sort=updated&order=desc";
+const GITHUB_URL = `https://api.github.com/search/repositories?q=user%3A${process.env.NEXT_PUBLIC_GITHUB_USER}&sort=updated&order=desc`;
 
 const LIMIT = 8;
 

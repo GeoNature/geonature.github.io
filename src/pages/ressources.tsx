@@ -13,12 +13,12 @@ export default function Ressources() {
         <Section
           title="Ressources"
           hero
-          heroImage="images/banners/benoit-gauzere-9bMgZ9jbsW4-unsplash.jpg"
+          heroImage="/images/banners/benoit-gauzere-9bMgZ9jbsW4-unsplash.jpg"
         />
         <Section title="GeoNature">
           <ul>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature">
+              <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature`}>
                 Téléchargement, code source, présentation complète et tickets
               </a>
             </li>
@@ -40,7 +40,9 @@ export default function Ressources() {
               </a>
             </li>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature/raw/v1/docs/pdf/protocoles-locaux-echanges-nationaux.pdf">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature/raw/v1/docs/pdf/protocoles-locaux-echanges-nationaux.pdf`}
+              >
                 Des protocoles locaux aux echanges de données nationaux
               </a>
             </li>
@@ -52,7 +54,7 @@ export default function Ressources() {
         <Section title="TaxHub" alternate>
           <ul>
             <li>
-              <a href="https://github.com/PnX-SI/TaxHub">
+              <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/TaxHub`}>
                 Téléchargement, code source, présentation et tickets
               </a>
             </li>
@@ -70,7 +72,7 @@ export default function Ressources() {
         <Section title="UsersHub">
           <ul>
             <li>
-              <a href="https://github.com/PnX-SI/UsersHub">
+              <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/UsersHub`}>
                 Téléchargement, code source, présentation et tickets
               </a>
             </li>
@@ -88,7 +90,7 @@ export default function Ressources() {
         <Section title="GeoNature Atlas" alternate>
           <ul>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature-atlas">
+              <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature-atlas`}>
                 Téléchargement, code source, présentation et tickets
               </a>
             </li>
@@ -98,22 +100,30 @@ export default function Ressources() {
               </a>
             </li>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature-atlas/blob/master/docs/installation.rst">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature-atlas/blob/master/docs/installation.rst`}
+              >
                 Documentation
               </a>
             </li>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature-atlas/blob/master/docs/2016-09-GeoNature-atlas-PRESENTATION.pdf">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature-atlas/blob/master/docs/2016-09-GeoNature-atlas-PRESENTATION.pdf`}
+              >
                 Présentation générale
               </a>
             </li>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature-atlas/blob/master/docs/2016-09-30-rapport_stage_Theo-Lechemia.pdf">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature-atlas/blob/master/docs/2016-09-30-rapport_stage_Theo-Lechemia.pdf`}
+              >
                 Rapport de stage (Théo Lechemia)
               </a>
             </li>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature-atlas/blob/master/docs/2016-09-soutenance-Theo-Lechemia.pdf">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature-atlas/blob/master/docs/2016-09-soutenance-Theo-Lechemia.pdf`}
+              >
                 Soutenance de stage (Théo Lechemia)
               </a>
             </li>
@@ -122,7 +132,9 @@ export default function Ressources() {
         <Section title="GeoNature Citizen">
           <ul>
             <li>
-              <a href="https://github.com/PnX-SI/GeoNature-citizen">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/GeoNature-citizen`}
+              >
                 Téléchargement, code source, présentation et tickets
               </a>
             </li>
@@ -146,12 +158,16 @@ export default function Ressources() {
         <Section title="OccTax Mobile" alternate>
           <ul>
             <li>
-              <a href="https://github.com/PnX-SI/gn_mobile_occtax">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/gn_mobile_occtax`}
+              >
                 Téléchargement, code source, présentation et tickets
               </a>
             </li>
             <li>
-              <a href="https://github.com/PnX-SI/gn_mobile_occtax/blob/doc-installation/docs/installation-fr.md">
+              <a
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/gn_mobile_occtax/blob/doc-installation/docs/installation-fr.md`}
+              >
                 Documentation
               </a>
             </li>

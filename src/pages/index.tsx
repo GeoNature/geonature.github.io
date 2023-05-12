@@ -73,7 +73,7 @@ export default function Home() {
             </li>
             <li>
               <HomeLinkButton
-                href="https://github.com/PnX-SI"
+                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}
                 className="btn-light"
               >
                 Code source

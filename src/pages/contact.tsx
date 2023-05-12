@@ -45,8 +45,8 @@ export default function Contact() {
           </p>
           <p>
             Pour tout échange ou question technique, reportez-vous aux{" "}
-            <a href="https://github.com/PnX-SI/">dépôts GitHub</a> des
-            différents projets
+            <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}>dépôts GitHub</a>{" "}
+            des différents projets
           </p>
         </Section>
       </main>
