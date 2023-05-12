@@ -15,10 +15,13 @@ export default function Demo() {
           heroImage="/images/banners/anastasia-nelen-mFHGq0RthBs-unsplash.jpg"
         ></Section>
         <Section title="Démonstrations">
-          <div className="row g-3">
+          <p>
+            Vous pouvez tester GeoNature et l'ensemble des outils aux liens
+            suivants :
+          </p>
+          <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
             <ScreenshotCard
               title="GeoNature"
-              columnClasses="col-sm-6 col-md-3"
               screenshotName="geonature"
               href="https://demo.geonature.fr/geonature"
             >
@@ -26,42 +29,34 @@ export default function Demo() {
                 Pour la saisie web, la consultation et l&apos;export des données
               </p>
               <dl>
-                <dt>Identifiant</dt>
-                <dd>admin</dd>
-                <dt>Mot de passe</dt>
-                <dd>admin</dd>
+                <dt>Identifiant / Mot de Passe</dt>
+                <dd>admin / admin</dd>
               </dl>
             </ScreenshotCard>
             <ScreenshotCard
               title="TaxHub"
-              columnClasses="col-sm-6 col-md-3"
               screenshotName="taxhub"
               href="https://demo.geonature.fr/taxhub"
             >
               <p>Pour la gestion de la taxonomie à partir de Taxref</p>
               <dl>
-                <dt>Identifiant</dt>
-                <dd>admin</dd>
-                <dt>Mot de passe</dt>
-                <dd>admin</dd>
+                <dt>Identifiant / Mot de Passe</dt>
+                <dd>admin / admin</dd>
               </dl>
             </ScreenshotCard>
             <ScreenshotCard
               title="UsersHub"
-              columnClasses="col-sm-6 col-md-3"
+              screenshotName="usersHub"
               href="https://demo.geonature.fr/usershub"
             >
               <p>Pour la gestion des utilisateurs et de leurs droits</p>
               <dl>
-                <dt>Identifiant</dt>
-                <dd>admin</dd>
-                <dt>Mot de passe</dt>
-                <dd>admin</dd>
+                <dt>Identifiant / Mot de Passe</dt>
+                <dd>admin / admin</dd>
               </dl>
             </ScreenshotCard>
             <ScreenshotCard
               title="GeoNature Atlas"
-              columnClasses="col-sm-6 col-md-3"
               screenshotName="geonature-atlas"
               href="https://biodiversite.ecrins-parcnational.fr"
             >
@@ -69,7 +64,6 @@ export default function Demo() {
             </ScreenshotCard>
             <ScreenshotCard
               title="GeoNature Citizen"
-              columnClasses="col-sm-6 col-md-3"
               screenshotName="geonature-citizen"
               href="https://obs.mercantour-parcnational.fr/"
             >
@@ -77,7 +71,6 @@ export default function Demo() {
             </ScreenshotCard>
             <ScreenshotCard
               title="Occtax Mobile"
-              columnClasses="col-sm-6 col-md-3"
               screenshotName="occtax-mobile"
               href="https://demo.geonature.fr"
             >
@@ -100,7 +93,7 @@ export default function Demo() {
           <GitHub />
           <Link
             href="https://github.com/PnX-SI"
-            className="btn btn-lg btn-primary text-white mt-3"
+            className="btn btn-lg btn-secondary mt-3"
             role="button"
           >
             GitHub (PnX-SI)

@@ -1,15 +1,13 @@
-import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 
 const ScreenshotCard: FC<
   PropsWithChildren<{
     title?: string;
-    columnClasses?: string;
     screenshotName?: string;
     href?: string;
   }>
-> = ({ title, screenshotName, columnClasses, children, href }) => (
-  <div className={clsx(columnClasses)}>
+> = ({ title, screenshotName, children, href }) => (
+  <div className="col">
     <div className="card">
       {screenshotName && (
         <img

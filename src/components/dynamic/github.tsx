@@ -16,7 +16,7 @@ type Response = {
 
 const Repository: FC<{ repository: Repository }> = ({ repository }) => {
   return (
-    <div className="col-sm-6 col-sm-4 col-md-3">
+    <div className="col">
       <div className="card">
         <div className="card-body">
           <div className="card-title">
@@ -47,7 +47,7 @@ const Repository: FC<{ repository: Repository }> = ({ repository }) => {
 const Repositories: FC<{ repositories: Repositories }> = ({ repositories }) => {
   return (
     <div className="Repositories">
-      <div className="row g-2">
+      <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2">
         {repositories.map((repository) => (
           <Repository key={repository.id} repository={repository} />
         ))}
