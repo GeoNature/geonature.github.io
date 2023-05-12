@@ -44,18 +44,6 @@ export default function Contact() {
             différents projets
           </p>
         </Section>
-        <Section title="Utilisateurs">
-          <p>
-            Consultez la{" "}
-            <a
-              href="https://lite.framacalc.org/9efn-geonature-users"
-              target="_blank"
-            >
-              liste des utilisateurs
-            </a>{" "}
-            de GeoNature
-          </p>
-        </Section>
       </main>
     </Page>
   );

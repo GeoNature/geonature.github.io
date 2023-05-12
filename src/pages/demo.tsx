@@ -16,7 +16,7 @@ export default function Demo() {
         ></Section>
         <Section title="Démonstrations">
           <p>
-            Vous pouvez tester GeoNature et l'ensemble des outils aux liens
+            Vous pouvez tester GeoNature et l&apos;ensemble des outils aux liens
             suivants :
           </p>
           <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">

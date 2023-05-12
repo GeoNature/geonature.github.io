@@ -1,12 +1,18 @@
 import clsx from "clsx";
 import Head from "next/head";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { FC, PropsWithChildren } from "react";
 
 import Page from "@/layout/Page";
 import Section from "@/components/presentation/Section";
 import Feature from "@/components/presentation/Feature";
 import PartnerCard from "@/components/presentation/PartnerCard";
+
+const PartnersMap = dynamic(() => import("@/components/dynamic/PartnersMap"), {
+  ssr: false,
+  loading: () => <span>Loading</span>,
+});
 
 const HomeLinkButton: FC<
   PropsWithChildren<{ href: string; className?: string }>
@@ -124,6 +130,19 @@ export default function Home() {
             </li>
             <li>La diffusion des données sur un portail web grand public</li>
           </ul>
+        </Section>
+        <Section title="Utilisateurs">
+          <p className="lead">
+            GeoNature est utilisé partout en France. Consultez la{" "}
+            <a
+              href="https://lite.framacalc.org/9efn-geonature-users"
+              target="_blank"
+            >
+              liste des utilisateurs
+            </a>{" "}
+            de GeoNature.
+          </p>
+          <PartnersMap />
         </Section>
         <Section title="Partenaires">
           <div className="row align-items-center justify-content-center row-cols-md-auto g-3">
