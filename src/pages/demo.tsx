@@ -16,7 +16,7 @@ export default function Demo() {
         <Section
           title="Code et Démo"
           hero
-          heroImage="/images/banners/anastasia-nelen-mFHGq0RthBs-unsplash.jpg"
+          heroImage="images/banners/anastasia-nelen-mFHGq0RthBs-unsplash.jpg"
         ></Section>
         <Section title="Démonstrations">
           <p>

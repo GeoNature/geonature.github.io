@@ -13,7 +13,7 @@ export default function Contact() {
         <Section
           title="Contact"
           hero
-          heroImage="/images/banners/marek-piwnicki-ZBvUxUvWwFw-unsplash.jpg"
+          heroImage="images/banners/marek-piwnicki-ZBvUxUvWwFw-unsplash.jpg"
         />
         <Section title="Des questions?">
           <p>

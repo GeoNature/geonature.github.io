@@ -13,7 +13,7 @@ export default function Ressources() {
         <Section
           title="Ressources"
           hero
-          heroImage="/images/banners/benoit-gauzere-9bMgZ9jbsW4-unsplash.jpg"
+          heroImage="images/banners/benoit-gauzere-9bMgZ9jbsW4-unsplash.jpg"
         />
         <Section title="GeoNature">
           <ul>

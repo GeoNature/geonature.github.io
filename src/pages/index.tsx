@@ -39,7 +39,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Section title="GeoNature" hero heroImage="/images/banners/hero.jpg">
+        <Section title="GeoNature" hero heroImage="images/banners/hero.jpg">
           <p className="lead">
             Un outil open source développé par les parcs nationaux français,
             <br /> pour saisir, gérer et diffuser des données faune et flore
