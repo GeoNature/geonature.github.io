@@ -134,10 +134,7 @@ export default function Home() {
         <Section title="Utilisateurs" alternate>
           <p className="lead">
             GeoNature est utilisé partout en France. Consultez la{" "}
-            <a
-              href="https://lite.framacalc.org/9efn-geonature-users"
-              target="_blank"
-            >
+            <a href="https://lite.framacalc.org/9efn-geonature-users">
               liste des utilisateurs
             </a>{" "}
             de GeoNature.
