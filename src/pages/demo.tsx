@@ -50,7 +50,7 @@ export default function Demo() {
             </ScreenshotCard>
             <ScreenshotCard
               title="UsersHub"
-              screenshotName="usersHub"
+              screenshotName="usershub"
               href="https://demo.geonature.fr/usershub"
             >
               <p>Pour la gestion des utilisateurs et de leurs droits</p>
