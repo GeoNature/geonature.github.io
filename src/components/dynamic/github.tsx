@@ -4,6 +4,8 @@ import useSWR from "swr";
 const GITHUB_URL =
   "https://api.github.com/search/repositories?q=user%3Apnx-si&sort=updated&order=desc";
 
+const LIMIT = 8;
+
 type Repository = any;
 type Repositories = Repository[];
 type Response = {
@@ -18,23 +20,20 @@ const Repository: FC<{ repository: Repository }> = ({ repository }) => {
       <div className="card">
         <div className="card-body">
           <div className="card-title">
-            {repository.owner && (
-              <span className="text-secondary">{repository.owner.login}</span>
-            )}
-            <h3 className="h4">
+            <h3 className="h5">
               <a href={repository.html_url}>{repository.name}</a>
             </h3>
           </div>
-          <div className="mb-3">{repository.description}</div>
-          <div className="mb-3">
+          <div className="mb-1">{repository.description}</div>
+          <div>
             {repository.language && (
-              <span className="badge text-bg-secondary me-1">
+              <span className="badge text-bg-light me-1">
                 {repository.language}
               </span>
             )}
             {repository.license &&
               repository.license.spdx_id != "NOASSERTION" && (
-                <span className="badge text-bg-secondary me-1">
+                <span className="badge text-bg-light me-1">
                   {repository.license.spdx_id}
                 </span>
               )}
@@ -48,7 +47,7 @@ const Repository: FC<{ repository: Repository }> = ({ repository }) => {
 const Repositories: FC<{ repositories: Repositories }> = ({ repositories }) => {
   return (
     <div className="Repositories">
-      <div className="row g-3">
+      <div className="row g-2">
         {repositories.map((repository) => (
           <Repository key={repository.id} repository={repository} />
         ))}
@@ -62,7 +61,8 @@ const GitHub = () => {
 
   if (isValidating) return <span>Loading</span>;
   else if (error) return <span>Error</span>;
-  else if (!!data) return <Repositories repositories={data.items} />;
+  else if (!!data)
+    return <Repositories repositories={data.items.slice(0, LIMIT)} />;
   else return null;
 };
 
