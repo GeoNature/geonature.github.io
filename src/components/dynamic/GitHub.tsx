@@ -1,17 +1,12 @@
 import React, { FC } from "react";
 import useSWR from "swr";
+import { DateTime } from "luxon";
 
-const GITHUB_URL = `https://api.github.com/search/repositories?q=user%3A${process.env.NEXT_PUBLIC_GITHUB_USER}&sort=updated&order=desc`;
-
-const LIMIT = 8;
+const LIMIT = 12;
+const GITHUB_URL = `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USER}/repos?sort=updated&per_page=${LIMIT}`;
 
 type Repository = any;
 type Repositories = Repository[];
-type Response = {
-  total_count: number;
-  incomplete_results: boolean;
-  items: Repositories;
-};
 
 const Repository: FC<{ repository: Repository }> = ({ repository }) => {
   return (
@@ -23,19 +18,22 @@ const Repository: FC<{ repository: Repository }> = ({ repository }) => {
               <a href={repository.html_url}>{repository.name}</a>
             </h3>
           </div>
-          <div className="mb-1">{repository.description}</div>
-          <div>
-            {repository.language && (
-              <span className="badge text-bg-light me-1">
-                {repository.language}
-              </span>
-            )}
-            {repository.license &&
-              repository.license.spdx_id != "NOASSERTION" && (
-                <span className="badge text-bg-light me-1">
-                  {repository.license.spdx_id}
-                </span>
-              )}
+          <p className="card-text">{repository.description}</p>
+        </div>
+        <div className="card-footer">
+          <div className="row g-1">
+            <div className="col">
+              {!!repository.updated_at &&
+                DateTime.fromISO(repository.updated_at).toLocaleString()}
+            </div>
+            <div className="col">
+              {!!repository.language && repository.language}
+            </div>
+            <div className="col">
+              {repository.license?.spdx_id &&
+                repository.license.spdx_id != "NOASSERTION" &&
+                repository.license.spdx_id}
+            </div>
           </div>
         </div>
       </div>
@@ -56,12 +54,11 @@ const Repositories: FC<{ repositories: Repositories }> = ({ repositories }) => {
 };
 
 const GitHub = () => {
-  const { data, error, isValidating } = useSWR<Response>(GITHUB_URL);
+  const { data, error, isValidating } = useSWR<Repositories>(GITHUB_URL);
 
   if (isValidating) return <span>Loading</span>;
   else if (error) return <span>Error</span>;
-  else if (!!data)
-    return <Repositories repositories={data.items.slice(0, LIMIT)} />;
+  else if (!!data) return <Repositories repositories={data} />;
   else return null;
 };
 

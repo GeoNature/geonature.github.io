@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 
 import Page from "@/layout/Page";
 import Section from "@/components/presentation/Section";
@@ -14,7 +13,7 @@ export default function Demo() {
       </Head>
       <main>
         <Section
-          title="Code et Démo"
+          title="Démo et code"
           hero
           heroImage="images/banners/anastasia-nelen-mFHGq0RthBs-unsplash.jpg"
         ></Section>
@@ -90,11 +89,19 @@ export default function Demo() {
           <p>
             Le code et les téléchargements se trouvent sur{" "}
             <a href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}>
-              les dépôts GitHub.
+              les dépôts GitHub
             </a>
             . Voici les dépôts récemment mis à jour :
           </p>
           <GitHub />
+        </Section>
+        <Section title="Installation">
+          <p>
+            Pour installer GeoNature sur un serveur, consulter{" "}
+            <a href="https://docs.geonature.fr/">la documentation</a>. Il existe
+            également des prestataires en France qui peuvent installer et gérer
+            GeoNature pour vous.
+          </p>
         </Section>
       </main>
     </Page>
