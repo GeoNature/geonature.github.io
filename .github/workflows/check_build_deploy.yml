@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Check, Build and Deploy
 
 on:
   push:
@@ -45,6 +45,8 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
       - name: Install dependencies
         run: pnpm install
+      - name: Check code style
+        run: pnpm dlx prettier@latest --check src/
       - name: Build
         run: pnpm build
       - name: Upload artifact
