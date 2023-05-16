@@ -1,38 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# geonature-fr
+
+Proposed replacement GeoNature promotional site for [geonature.fr](https://geonature.fr). Built using [Next.js](https://nextjs.org/) with TypeScript, it is intended to be hosted as a fully static site on GitHub Pages.
+
+## Principles
+
+- Static HTML (JavaScript used to enhance websiet, but not a requirement)
+- SEO friendly (includes sitemap)
+- Auto build/deploy (to facilitate updates)
+- Open source
 
 ## Getting Started
 
-First, run the development server:
+The site uses [PNPM](https://pnpm.io/), an optmised version of NPM. To get started `pnpm install` then run `pnpm dev` for running the site in dev mode at [http://localhost:3000](http://localhost:3000).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Contributing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Please use Prettier to format code in the `src/` directory, this is automatically checked by GitHub Actions before the site is built and deployed, and will fail if the code does not conform.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Building and Deploying
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The site uses Next.js's "export" functionality. To build locally, run `pnpm build` and you can see the result in `out/`. Deployment is handled automatically by GitHub Actions, visible in the `.github/workflows/` directory.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `.github/workflows/` GitHub Actions (build and deploy)
+- `public/` Static assets (images, icons, GeoJSON)
+- `src/` Main code
+  - `components/dynamic/` Components for dynamic aspects of the page (API calls, geospatial etc)
+  - `components/presentation/` Visual components (cards, features, etc)
+  - `layout/` Header, footer etc
+  - `pages/` Pages of the website (as per Next.js norms)
+  - `styles/` Bootstrap import plus variable overrides and custom SCSS
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## TODO
+### MVP
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Optimise images
+- [ ] Fix alt text for images
+- [ ] Document components in docstrings
+- [ ] Add font loading (Open Sans)
+- [ ] Set up prettier
+- [ ] Check current site layout (links/broken links)
+- [ ] Add news/blog from markdown source
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Content
 
-## Deploy on Vercel
+- [ ] Add architectural information
+- [ ] Add links to providers of GeoNature
+- [ ] Protocols page
+- [ ] Actu page (import into blog feature?)
+- [ ] Update static map of installations (polygons, type of entity, more information)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Future
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] Integration of release information via open GitHub API
+- [ ] Crowd sourcing install information with geospatial information
+- [ ] Add custom illustrations
+- [ ] Add photos from Ecrins/elsewhere to replace Unsplash
+- [ ] Copywrite content (help from NS comms?)
