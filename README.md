@@ -30,10 +30,13 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
 - `.github/workflows/` GitHub Actions (build and deploy)
 - `public/` Static assets (images, icons, GeoJSON)
 - `src/` Main code
+  - `_posts/` **Blog posts** in Markdown format
   - `components/dynamic/` Components for dynamic aspects of the page (API calls, geospatial etc)
+  - `components/posts/` Visual components for blog posts
   - `components/presentation/` Visual components (cards, features, etc)
   - `layout/` Header, footer etc
-  - `pages/` Pages of the website (as per Next.js norms)
+  - `lib/` Helper libraries for transforming blog posts
+  - `pages/` **Pages** of the website (as per Next.js norms)
   - `styles/` Bootstrap import plus variable overrides and custom SCSS
 
 ## TODO
