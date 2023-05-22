@@ -6,10 +6,37 @@ $custom-spacers: (
 
 $spacers: map-merge($spacers, $custom-spacers);
 
+// Section 'hero' configuration
+
 .bg-hero {
   // background-image provided by inline style tags
   background-color: rgba($primary, 0.3);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+// Constrainer
+$constrainer-offset: 160px;
+$constrainer-width: map-get($container-max-widths, "xxl") + $constrainer-offset;
+
+#__next {
+  background-color: $gray-100;
+}
+
+.constrainer {
+  @media (min-width: ($constrainer-width+1px)) {
+    border: 1px solid rgba($black, 0.125);
+    background-color: $body-bg;
+    border-top: 0;
+    border-bottom: 0;
+    margin: auto;
+    width: $constrainer-width;
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
 }

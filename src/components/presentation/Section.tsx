@@ -27,7 +27,7 @@ const Section: FC<
     <section
       className={clsx(
         !noContainer && "container",
-        hero ? (heroImage ? "py-8" : "py-6") : "py-4 my-4"
+        hero ? (heroImage ? "py-8" : "py-6") : "py-5"
       )}
     >
       <div
