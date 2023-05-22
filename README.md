@@ -11,11 +11,15 @@ Proposed replacement GeoNature promotional site for [geonature.fr](https://geona
 
 ## Getting Started
 
-The site uses [PNPM](https://pnpm.io/), an optmised version of NPM. To get started `pnpm install` then run `pnpm dev` for running the site in dev mode at [http://localhost:3000](http://localhost:3000).
+The site uses [PNPM](https://pnpm.io/), an optimised version of NPM. To get started `pnpm install` then run `pnpm dev` for running the site in dev mode at [http://localhost:3000](http://localhost:3000).
 
 ## Contributing
 
 Please use Prettier to format code in the `src/` directory, this is automatically checked by GitHub Actions before the site is built and deployed, and will fail if the code does not conform.
+
+```bash
+pnpm dlx prettier@latest --write src
+```
 
 ## Building and Deploying
 
@@ -32,15 +36,14 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
   - `pages/` Pages of the website (as per Next.js norms)
   - `styles/` Bootstrap import plus variable overrides and custom SCSS
 
-
 ## TODO
+
 ### MVP
 
 - [ ] Optimise images
 - [ ] Fix alt text for images
 - [ ] Document components in docstrings
 - [ ] Add font loading (Open Sans)
-- [ ] Set up prettier
 - [ ] Check current site layout (links/broken links)
 - [ ] Add news/blog from markdown source
 
