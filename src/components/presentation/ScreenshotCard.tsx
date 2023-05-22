@@ -1,19 +1,20 @@
 import { FC, PropsWithChildren } from "react";
+import Image from "next/image";
 
 const ScreenshotCard: FC<
   PropsWithChildren<{
     title?: string;
-    screenshotName?: string;
+    screenshot: any;
     href?: string;
   }>
-> = ({ title, screenshotName, children, href }) => (
+> = ({ title, screenshot, children, href }) => (
   <div className="col">
     <div className="card">
-      {screenshotName && (
-        <img
-          src={`images/screenshots/${screenshotName}.png`}
-          className="card-img-top"
-          alt="TODO"
+      {screenshot && (
+        <Image
+          src={screenshot}
+          className="card-img-top h-auto"
+          alt={`Screenshot of ${title}`}
         />
       )}
       <div className="card-body">

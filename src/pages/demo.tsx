@@ -25,8 +25,8 @@ export default function Demo() {
           <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
             <ScreenshotCard
               title="GeoNature"
-              screenshotName="geonature"
               href="https://demo.geonature.fr/geonature"
+              screenshot={require("public/images/screenshots/geonature.png")}
             >
               <p>
                 Pour la saisie web, la consultation et l&apos;export des données
@@ -38,8 +38,8 @@ export default function Demo() {
             </ScreenshotCard>
             <ScreenshotCard
               title="TaxHub"
-              screenshotName="taxhub"
               href="https://demo.geonature.fr/taxhub"
+              screenshot={require("public/images/screenshots/taxhub.png")}
             >
               <p>Pour la gestion de la taxonomie à partir de Taxref</p>
               <dl>
@@ -49,8 +49,8 @@ export default function Demo() {
             </ScreenshotCard>
             <ScreenshotCard
               title="UsersHub"
-              screenshotName="usershub"
               href="https://demo.geonature.fr/usershub"
+              screenshot={require("public/images/screenshots/usershub.png")}
             >
               <p>Pour la gestion des utilisateurs et de leurs droits</p>
               <dl>
@@ -60,22 +60,22 @@ export default function Demo() {
             </ScreenshotCard>
             <ScreenshotCard
               title="GeoNature Atlas"
-              screenshotName="geonature-atlas"
               href="https://biodiversite.ecrins-parcnational.fr"
+              screenshot={require("public/images/screenshots/geonature-atlas.png")}
             >
               <p>Pour la diffusion des données</p>
             </ScreenshotCard>
             <ScreenshotCard
               title="GeoNature Citizen"
-              screenshotName="geonature-citizen"
               href="https://obs.mercantour-parcnational.fr/"
+              screenshot={require("public/images/screenshots/geonature-citizen.png")}
             >
               <p>Pour la collecte citoyenne ouverte de données</p>
             </ScreenshotCard>
             <ScreenshotCard
               title="Occtax Mobile"
-              screenshotName="occtax-mobile"
               href="https://demo.geonature.fr"
+              screenshot={require("public/images/screenshots/occtax-mobile.png")}
             >
               <p>Pour la saisie mobile dans Occtax</p>
               <p>
