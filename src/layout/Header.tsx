@@ -40,7 +40,7 @@ const Header: FC = () => (
   <nav className="navbar navbar-expand-lg bg-white shadow-sm">
     <div className="container">
       <Link href="/" className="navbar-brand">
-        <Image src={logo} height={30} className="me-1" alt="TODO" />
+        <Image src={logo} height={30} className="me-1" alt="" />
         GeoNature
       </Link>
 

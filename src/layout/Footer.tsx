@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container">
       <ul className="nav">
         <li className="navbar-text">
-          Copyleft 2014–2023 Parc National des Ecrins/Parc national des Cévennes
+          Copyleft 2014–2023 Parc national des Ecrins/Parc national des Cévennes
         </li>
       </ul>
     </div>
