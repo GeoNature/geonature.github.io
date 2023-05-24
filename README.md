@@ -47,15 +47,14 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
 - [ ] Document components in docstrings
 - [ ] Add font loading (Open Sans)
 - [ ] Check current site layout (links/broken links)
-- [ ] Add news/blog from markdown source
-- [ ] Home: latest news
+- [ ] News: add cover images
 
 ### Content
 
 - [ ] Add architectural information
 - [ ] Add links to providers of GeoNature
 - [ ] Protocols page
-- [ ] Actu page (import into blog feature?)
+- [ ] Import blog content from 'actus' page
 - [ ] Update static map of installations (polygons, type of entity, more information)
 
 ### Future

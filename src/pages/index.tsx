@@ -9,6 +9,9 @@ import Section from "@/components/presentation/Section";
 import Feature from "@/components/presentation/Feature";
 import PartnerCard from "@/components/presentation/PartnerCard";
 import Release from "@/components/dynamic/github/Release";
+import PostPreview from "@/components/posts/PostPreview";
+import { getAllPosts } from "@/lib/api";
+import Post from "@/interfaces/Post";
 
 const PartnersMap = dynamic(() => import("@/components/dynamic/PartnersMap"), {
   ssr: false,
@@ -27,7 +30,7 @@ const HomeLinkButton: FC<
   </Link>
 );
 
-export default function Home() {
+export default function Home({ post }: { post: Post }) {
   return (
     <Page>
       <Head>
@@ -113,11 +116,13 @@ export default function Home() {
         <div className="bg-light">
           <div className="container">
             <div className="row">
-              {/*<div className="col-md-6">
-                <Section title="Latest News" noContainer></Section>
-              </div>*/}
               <div className="col-md-6">
-                <Section title="Latest Releases" noContainer>
+                <Section title="Actualités" noContainer>
+                  <PostPreview post={post} />
+                </Section>
+              </div>
+              <div className="col-md-6">
+                <Section title="Dernières versions" noContainer>
                   <div className="row row-cols-lg-2 g-2">
                     <Release title="GeoNature" repository="GeoNature" />
                     <Release
@@ -226,3 +231,11 @@ export default function Home() {
     </Page>
   );
 }
+
+export const getStaticProps = async () => {
+  const posts = getAllPosts(["title", "date", "slug", "author", "excerpt"]);
+
+  return {
+    props: { post: posts[0] },
+  };
+};

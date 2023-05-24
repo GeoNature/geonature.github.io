@@ -11,7 +11,7 @@ const PartnerCard: FC<{
         <img
           src={`images/partners/${logoName}.png`}
           className="card-img"
-          style={{ maxWidth: "172px" }}
+          style={{ maxHeight: "72px" }}
           alt={title}
         />
       </a>
