@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import Page from "@/layout/Page";
 import Section from "@/components/presentation/Section";
-import GitHub from "@/components/dynamic/GitHub";
+import Repositories from "@/components/dynamic/github/Repositories";
 import ScreenshotCard from "@/components/presentation/ScreenshotCard";
 
 export default function Demo() {
@@ -93,7 +93,7 @@ export default function Demo() {
             </a>
             . Voici les dépôts récemment mis à jour :
           </p>
-          <GitHub />
+          <Repositories />
         </Section>
         <Section title="Installation">
           <p>

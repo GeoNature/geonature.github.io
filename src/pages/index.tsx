@@ -8,6 +8,7 @@ import Page from "@/layout/Page";
 import Section from "@/components/presentation/Section";
 import Feature from "@/components/presentation/Feature";
 import PartnerCard from "@/components/presentation/PartnerCard";
+import Release from "@/components/dynamic/github/Release";
 
 const PartnersMap = dynamic(() => import("@/components/dynamic/PartnersMap"), {
   ssr: false,
@@ -131,6 +132,32 @@ export default function Home() {
             </Feature>
           </div>
         </Section>
+        <div className="bg-light">
+          <div className="container">
+            <div className="row">
+              {/*<div className="col-md-6">
+                <Section title="Latest News" noContainer></Section>
+              </div>*/}
+              <div className="col-md-6">
+                <Section title="Latest Releases" noContainer>
+                  <div className="row row-cols-lg-2 g-2">
+                    <Release title="GeoNature" repository="GeoNature" />
+                    <Release
+                      title="GeoNature Atlas"
+                      repository="GeoNature-atlas"
+                    />
+                    <Release title="TaxHub" repository="TaxHub" />
+                    <Release title="UsersHub" repository="UsersHub" />
+                    <Release
+                      title="Occtax Mobile"
+                      repository="gn_mobile_occtax"
+                    />
+                  </div>
+                </Section>
+              </div>
+            </div>
+          </div>
+        </div>
         <Section title="Utilisateurs" alternate>
           <p className="lead">
             GeoNature est utilisé partout en France. Consultez la{" "}
@@ -168,8 +195,6 @@ export default function Home() {
               logoName="logo-pag"
               href="https://www.parc-amazonien-guyane.fr/"
             />
-          </div>
-          <div className="row align-items-center justify-content-center row-cols-md-auto g-3">
             <PartnerCard
               title="CREA Mont Blanc"
               logoName="logo-crea"

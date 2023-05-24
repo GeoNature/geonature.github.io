@@ -32,7 +32,6 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
 - `src/` Main code
   - `_posts/` **Blog posts** in Markdown format
   - `components/dynamic/` Components for dynamic aspects of the page (API calls, geospatial etc)
-  - `components/posts/` Visual components for blog posts
   - `components/presentation/` Visual components (cards, features, etc)
   - `layout/` Header, footer etc
   - `lib/` Helper libraries for transforming blog posts
@@ -49,6 +48,7 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
 - [ ] Add font loading (Open Sans)
 - [ ] Check current site layout (links/broken links)
 - [ ] Add news/blog from markdown source
+- [ ] Home: latest news
 
 ### Content
 
@@ -60,7 +60,6 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
 
 ### Future
 
-- [ ] Integration of release information via open GitHub API
 - [ ] Crowd sourcing install information with geospatial information
 - [ ] Add custom illustrations
 - [ ] Add photos from Ecrins/elsewhere to replace Unsplash
