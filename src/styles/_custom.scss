@@ -20,10 +20,6 @@ $spacers: map-merge($spacers, $custom-spacers);
 $constrainer-offset: 160px;
 $constrainer-width: map-get($container-max-widths, "xxl") + $constrainer-offset;
 
-#__next {
-  background-color: $gray-100;
-}
-
 .constrainer {
   @media (min-width: ($constrainer-width+1px)) {
     border: 1px solid rgba($black, 0.125);

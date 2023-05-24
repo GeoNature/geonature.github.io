@@ -35,7 +35,14 @@ export default function Contact() {
             .
           </p>
         </Section>
-        <Section title="Discussions" alternate>
+        <Section title="Prestataires" alternate>
+          <p>
+            Bien que GeoNature soit un logiciel libre que vous pouvez installer
+            vous-même, il existe des prestataires qui peuvent également
+            l&apos;installer et le gérer pour vous.
+          </p>
+        </Section>
+        <Section title="Discussions">
           <p>
             Inscrivez-vous à{" "}
             <a href="https://framalistes.org/sympa/info/geonature-info">
