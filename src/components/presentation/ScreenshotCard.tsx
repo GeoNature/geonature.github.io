@@ -10,6 +10,7 @@ const ScreenshotCard: FC<
 > = ({ title, screenshot, children, href }) => (
   <div className="col">
     <div className="card">
+      {title && <h3 className="card-header">{title}</h3>}
       {screenshot && (
         <Image
           src={screenshot}
@@ -18,7 +19,6 @@ const ScreenshotCard: FC<
         />
       )}
       <div className="card-body">
-        {title && <h3 className="card-title">{title}</h3>}
         {children}
         {href && (
           <a href={href} className="btn btn-primary text-white">
