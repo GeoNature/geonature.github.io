@@ -1,19 +1,18 @@
-import { FC } from "react";
+import Image from "next/image";
 
-const PartnerCard: FC<{
-  title?: string;
-  logoName: string;
+const PartnerCard = ({
+  title,
+  logo,
+  href,
+}: {
+  title: string;
+  logo: any;
   href?: string;
-}> = ({ title, logoName, href }) => (
+}) => (
   <div className="col">
     <div className="card border-0">
       <a href={href}>
-        <img
-          src={`images/partners/${logoName}.png`}
-          className="card-img"
-          style={{ maxHeight: "72px" }}
-          alt={title}
-        />
+        <Image src={logo} className="card-img w-auto" height={72} alt={title} />
       </a>
     </div>
   </div>

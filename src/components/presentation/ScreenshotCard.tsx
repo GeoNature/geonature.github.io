@@ -1,13 +1,16 @@
 import { FC, PropsWithChildren } from "react";
 import Image from "next/image";
 
-const ScreenshotCard: FC<
-  PropsWithChildren<{
-    title?: string;
-    screenshot: any;
-    href?: string;
-  }>
-> = ({ title, screenshot, children, href }) => (
+const ScreenshotCard = ({
+  title,
+  screenshot,
+  children,
+  href,
+}: PropsWithChildren<{
+  title?: string;
+  screenshot: any;
+  href?: string;
+}>) => (
   <div className="col">
     <div className="card">
       {title && <h3 className="card-header">{title}</h3>}

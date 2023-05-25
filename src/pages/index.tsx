@@ -143,20 +143,32 @@ export default function Home({ post }: { post: Post }) {
         </div>
         <Section title="En bref">
           <div className="row row-cols-sm-2 row-cols-md-4">
-            <Feature title="Chaine de travail" iconName="dataProcessing">
+            <Feature
+              title="Chaine de travail"
+              icon={require("public/icons/dataProcessing.png")}
+            >
               De la gestion de référentiels en passant par les bases de données
               scientifiques jusqu&apos;à la synthèse et la diffusion des
               données.
             </Feature>
-            <Feature title="Mobile" iconName="natureOnScreen">
+            <Feature
+              title="Mobile"
+              icon={require("public/icons/natureOnScreen.png")}
+            >
               GeoNature-mobile et Occtax-mobile permettent de saisir les données
               faune et flore directement sur le terrain.
             </Feature>
-            <Feature title="Open source" iconName="codeReview">
+            <Feature
+              title="Open source"
+              icon={require("public/icons/codeReview.png")}
+            >
               GeoNature, UsersHub, TaxHub, GeoNature-atlas et GeoNature-citizen
               sont disponibles sous licence libre sur Github.
             </Feature>
-            <Feature title="Collaboratif" iconName="collaborators">
+            <Feature
+              title="Collaboratif"
+              icon={require("public/icons/collaborators.png")}
+            >
               GeoNature est développé par plusieurs parcs nationaux et la
               communauté des utilisateurs et développeurs continue de
               s&apos;étendre.
@@ -177,52 +189,52 @@ export default function Home({ post }: { post: Post }) {
           <div className="row align-items-center justify-content-center row-cols-md-auto g-3">
             <PartnerCard
               title="Parc national des Ecrins"
-              logoName="logo-pne"
+              logo={require("public/images/partners/logo-pne.png")}
               href="https://www.ecrins-parcnational.fr/"
             />
             <PartnerCard
               title="Parc national des Cévennes"
-              logoName="logo-pnc"
+              logo={require("public/images/partners/logo-pnc.png")}
               href="https://www.cevennes-parcnational.fr/"
             />
             <PartnerCard
               title="Parc national de la Vanoise"
-              logoName="logo-pnv"
+              logo={require("public/images/partners/logo-pnv.png")}
               href="https://www.vanoise-parcnational.fr/"
             />
             <PartnerCard
               title="Parc national du Mercantour"
-              logoName="logo-pnm"
+              logo={require("public/images/partners/logo-pnm.png")}
               href="https://www.mercantour-parcnational.fr/"
             />
             <PartnerCard
               title="Parc amazonien de Guyane"
-              logoName="logo-pag"
+              logo={require("public/images/partners/logo-pag.png")}
               href="https://www.parc-amazonien-guyane.fr/"
             />
             <PartnerCard
               title="CREA Mont Blanc"
-              logoName="logo-crea"
+              logo={require("public/images/partners/logo-crea.png")}
               href="https://creamontblanc.org/"
             />
             <PartnerCard
               title="SILENE"
-              logoName="logo-silene"
+              logo={require("public/images/partners/logo-silene.png")}
               href="https://silene.eu/"
             />
             <PartnerCard
               title="INPN"
-              logoName="logo-inpn"
+              logo={require("public/images/partners/logo-inpn.png")}
               href="https://inpn.mnhn.fr/"
             />
             <PartnerCard
               title="PatriNat"
-              logoName="logo-patrinat"
+              logo={require("public/images/partners/logo-patrinat.png")}
               href="https://www.patrinat.fr/"
             />
             <PartnerCard
               title="OFB"
-              logoName="logo-ofb"
+              logo={require("public/images/partners/logo-ofb.png")}
               href="https://www.ofb.gouv.fr/"
             />
           </div>

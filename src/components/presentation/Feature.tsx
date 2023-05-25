@@ -1,17 +1,18 @@
-import { FC, PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
+import Image from "next/image";
 
-const Feature: FC<PropsWithChildren<{ title?: string; iconName?: string }>> = ({
+const Feature = ({
   title,
-  iconName,
+  icon,
   children,
-}) => (
+}: PropsWithChildren<{ title?: string; icon?: any }>) => (
   <div className="col">
     <div className="card border-0">
-      {iconName && (
-        <img
-          src={`icons/${iconName}.png`}
-          className="card-img-top"
-          alt="TODO"
+      {icon && (
+        <Image
+          src={icon}
+          className="card-img-top h-auto"
+          alt={`Graphic showing ${title}`}
         />
       )}
       <div className="card-body">
