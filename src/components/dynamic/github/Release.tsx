@@ -51,12 +51,11 @@ const Release = ({ repository, ...others }: Props) => {
     `${BASE_URL}/${repository}/releases`
   );
 
-  if (null || isValidating || error)
-    return <ReleaseCard {...others} repository={repository} />;
-  else if (!!data)
+  if (!!data)
     return (
       <ReleaseCard {...others} repository={repository} release={data[0]} />
     );
+  else return <ReleaseCard {...others} repository={repository} />;
 };
 
 export default Release;
