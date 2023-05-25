@@ -6,14 +6,21 @@ $custom-spacers: (
 
 $spacers: map-merge($spacers, $custom-spacers);
 
-// Section 'hero' configuration
-
-.bg-hero {
-  // background-image provided by inline style tags
+// Section 'hero' configuration (to allow for background image with optimisation)
+.heroImage-container {
+  position: relative;
   background-color: rgba($primary, 0.3);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  .heroImage-image {
+    z-index: 0;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .heroImage-content {
+    z-index: 1;
+    position: relative;
+  }
 }
 
 // Constrainer

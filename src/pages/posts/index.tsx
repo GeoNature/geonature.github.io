@@ -16,7 +16,7 @@ export default function Actualites({ posts }: { posts: Post[] }) {
         <Section
           title="Actualités"
           hero
-          heroImage="/images/banners/header-actus.jpg"
+          heroImage={require("public/images/banners/header-actus.jpg")}
         />
         <Section>{posts.length > 0 && <PostList posts={posts} />}</Section>
       </main>

@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
+import Image from "next/image";
 
 /**
  * For simplifying the layout of pages. "Hero" can be used to highlight important content.
@@ -10,7 +11,7 @@ const Section: FC<
     hero?: boolean;
     alternate?: boolean;
     noContainer?: boolean;
-    heroImage?: string;
+    heroImage?: any;
   }>
 > = ({
   title,
@@ -20,14 +21,14 @@ const Section: FC<
   noContainer = false,
   heroImage,
 }) => (
-  <div
-    className={clsx(hero && "bg-hero", alternate && "bg-light")}
-    style={hero && heroImage ? { backgroundImage: `url(${heroImage})` } : {}}
-  >
+  <div className={clsx(hero && "heroImage-container", alternate && "bg-light")}>
+    {hero && heroImage && (
+      <Image src={heroImage} fill className="heroImage-image" alt="TODO" />
+    )}
     <section
       className={clsx(
         !noContainer && "container",
-        hero ? (heroImage ? "py-8" : "py-6") : "py-5"
+        hero ? (heroImage ? "py-8 heroImage-content" : "py-6") : "py-5"
       )}
     >
       <div

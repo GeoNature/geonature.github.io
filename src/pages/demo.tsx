@@ -15,7 +15,7 @@ export default function Demo() {
         <Section
           title="Démo et code"
           hero
-          heroImage="images/banners/anastasia-nelen-mFHGq0RthBs-unsplash.jpg"
+          heroImage={require("public/images/banners/anastasia-nelen-mFHGq0RthBs-unsplash.jpg")}
         ></Section>
         <Section title="Démonstrations">
           <p>
