@@ -8,6 +8,8 @@ Proposed replacement GeoNature promotional site for [geonature.fr](https://geona
 - SEO friendly (includes sitemap)
 - Auto build/deploy (to facilitate updates)
 - Open source
+- Automatic image optimisation
+- Integration with GitHub API (for showing repositories and releases)
 
 ## Getting Started
 
@@ -44,12 +46,11 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
 
 ### MVP
 
-- [ ] Optimise images
 - [ ] Fix alt text for images
 - [ ] Document components in docstrings
 - [ ] Add font loading (Open Sans)
 - [ ] Check current site layout (links/broken links)
-- [ ] News: add cover images
+- [ ] News: add cover images to posts
 
 ### Content
 
