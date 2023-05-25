@@ -1,43 +1,62 @@
-import React, { FC } from "react";
+import React from "react";
 import useSWR from "swr";
 import { DateTime } from "luxon";
 
 const BASE_URL = `https://api.github.com/repos/${process.env.NEXT_PUBLIC_GITHUB_USER}`;
+const REPOSITORY_URL = `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USER}`;
 
 type Release = any;
 type Releases = Release[];
 
-const Release: FC<{ title?: string; repository: string }> = ({
+type Props = { title?: string; repository: string };
+
+const ReleaseCard = ({
   title,
   repository,
-}) => {
-  const { data, error, isValidating } = useSWR<Releases>(
-    `${BASE_URL}/${repository}/releases`
-  );
-
-  if (isValidating) return <span>Loading</span>;
-  else if (error) return <span>Error</span>;
-  else if (!!data) {
-    const release = data[0];
-    return (
-      <div className="col">
-        <div className="card">
-          <div className="card-body">
-            <div className="card-title">
-              <h3 className="h5">
-                <a href={release.html_url}>{title || repository}</a>{" "}
-                <small>{release.tag_name}</small>
-              </h3>
-            </div>
+  release,
+}: Props & { release?: Release }) => {
+  const cardTitle = title || repository;
+  return (
+    <div className="col">
+      <div className="card">
+        <div className="card-body">
+          <div className="card-title">
+            <h3 className="h5">
+              {release && (
+                <>
+                  <a href={release.html_url}>{cardTitle}</a>&nbsp;
+                  <small>{release.tag_name}</small>
+                </>
+              )}
+              {!release && <span>{cardTitle}</span>}
+            </h3>
+          </div>
+          {release && (
             <p className="card-text">
               Publié le{" "}
               {DateTime.fromISO(release.published_at).toLocaleString()}
             </p>
-          </div>
+          )}
+          {!release && (
+            <a href={`${REPOSITORY_URL}/${repository}/releases`}>Releases</a>
+          )}
         </div>
       </div>
+    </div>
+  );
+};
+
+const Release = ({ repository, ...others }: Props) => {
+  const { data, error, isValidating } = useSWR<Releases>(
+    `${BASE_URL}/${repository}/releases`
+  );
+
+  if (null || isValidating || error)
+    return <ReleaseCard {...others} repository={repository} />;
+  else if (!!data)
+    return (
+      <ReleaseCard {...others} repository={repository} release={data[0]} />
     );
-  } else return null;
 };
 
 export default Release;
