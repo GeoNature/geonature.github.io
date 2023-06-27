@@ -23,6 +23,8 @@ Le travail s'est notamment concentré sur :
 - Mise en place de taches automatisées et de notifications quand un export est généré
 - Révision, optimisation et simplifications des permissions du module
 
+![Quelques photos du workshop à Nyons](/images/posts/2023-06_workshop.png)
+
 Ce workshop a aussi été l'occasion de réfléchir collectivement aux évolutions techniques plus globales de GeoNature, d'initier une nouvelle version du site internet <https://geonature.fr>, d'accueillir Pierre Narcisi tout juste recruté par Patrinat et de dire au revoir à Élie Bouttier et de le remercier pour le travail important qu'il a fait sur le socle et les bonnes pratiques de GeoNature pendant 2 ans et demi.
 
 A voir aussi sur <https://www.linkedin.com/feed/update/urn:li:activity:7078314856826728448/>.
