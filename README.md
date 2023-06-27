@@ -30,9 +30,10 @@ The site uses Next.js's "export" functionality. To build locally, run `pnpm buil
 ## Architecture
 
 - `.github/workflows/` GitHub Actions (build and deploy)
-- `public/` Static assets (images, icons, GeoJSON)
+- `public/` Static assets (images, icons)
 - `src/` Main code
   - `_posts/` **Blog posts** in Markdown format
+  - `_users/` **Users** in Markdown format, with associated GeoJSON for the map
   - `components/dynamic/` Components for dynamic aspects of the page (API calls, geospatial etc)
   - `components/presentation/` Visual components (cards, features, etc)
   - `components/posts/` Visual components for blog posts

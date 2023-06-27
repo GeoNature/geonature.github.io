@@ -10,10 +10,11 @@ import Feature from "@/components/presentation/Feature";
 import PartnerCard from "@/components/presentation/PartnerCard";
 import Release from "@/components/dynamic/github/Release";
 import PostPreview from "@/components/posts/PostPreview";
-import { getAllPosts } from "@/lib/api";
+import { getAllPosts, getAllUsers } from "@/lib/api";
 import Post from "@/interfaces/Post";
+import User from "@/interfaces/User";
 
-const PartnersMap = dynamic(() => import("@/components/dynamic/PartnersMap"), {
+const UsersMap = dynamic(() => import("@/components/dynamic/UsersMap"), {
   ssr: false,
   loading: () => <span>Loading</span>,
 });
@@ -30,7 +31,7 @@ const HomeLinkButton: FC<
   </Link>
 );
 
-export default function Home({ post }: { post: Post }) {
+export default function Home({ post, users }: { post: Post; users: User[] }) {
   return (
     <Page>
       <Head>
@@ -187,7 +188,7 @@ export default function Home({ post }: { post: Post }) {
             </a>{" "}
             de GeoNature.
           </p>
-          <PartnersMap />
+          <UsersMap users={users} />
         </Section>
         <Section title="Partenaires">
           <div className="row align-items-center justify-content-center row-cols-md-auto g-3">
@@ -250,8 +251,9 @@ export default function Home({ post }: { post: Post }) {
 
 export const getStaticProps = async () => {
   const posts = getAllPosts(["title", "date", "slug", "author", "excerpt"]);
+  const users = getAllUsers(["name", "geometry"]);
 
   return {
-    props: { post: posts[0] },
+    props: { post: posts[0], users: users },
   };
 };
