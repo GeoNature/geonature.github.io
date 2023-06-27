@@ -2,11 +2,11 @@ import { FC } from "react";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 import Page from "@/layout/Page";
 import Section from "@/components/presentation/Section";
 import { getPostBySlug, getAllPosts } from "@/lib/api";
-import markdownToHtml from "@/lib/markdownToHtml";
 
 type Props = {
   post: any;
@@ -29,7 +29,15 @@ const PostHeader: FC<{ title: string; date: string; author: string }> = ({
 const PostBody: FC<{ content: string }> = ({ content }) => {
   return (
     <div className="container my-5">
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <ReactMarkdown
+        components={{
+          img: (props) => (
+            <img src={props.src} alt={props.alt} className="img-fluid" />
+          ),
+        }}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   );
 };
@@ -68,14 +76,10 @@ export async function getStaticProps({ params }: Params) {
     "slug",
     "content",
   ]);
-  const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      post: post,
     },
   };
 }
