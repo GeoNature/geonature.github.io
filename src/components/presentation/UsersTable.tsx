@@ -14,7 +14,7 @@ const DownloadLink = ({ data, children }: PropsWithChildren<{ data: any }>) => (
 
 const UsersTable = ({ users }: { users: User[] }) => (
   <>
-    {!users && <span>Il n'y a pas d'utilisateurs.</span>}
+    {!users && <span>Il n&apos;y a pas d&apos;utilisateurs.</span>}
     {users && (
       <>
         <table className="table">
