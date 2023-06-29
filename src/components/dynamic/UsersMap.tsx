@@ -14,6 +14,11 @@ const featureStyle = {
   fillOpacity: 0.3,
 };
 
+const getGeometry = (geometryName: string) =>
+  userGeometries.features.filter(
+    (feature) => feature?.properties?.name === geometryName
+  )[0].geometry;
+
 const PartnersMap = ({ users }: { users: User[] }) => {
   const tooltipOnEachFeature = (feature: Feature, layer: Layer) => {
     layer.bindTooltip(
@@ -36,21 +41,15 @@ const PartnersMap = ({ users }: { users: User[] }) => {
           properties: {
             ...others,
           },
-          geometry: userGeometries.features.filter(
-            (feature) => feature?.properties?.name === geometryName
-          )[0].geometry,
+          geometry: getGeometry(geometryName),
         }
       )
     );
-
-  console.log(usersAsFeatures);
 
   const usersFeatureCollection: FeatureCollection = {
     type: "FeatureCollection" as const,
     features: usersAsFeatures,
   };
-
-  console.log(usersFeatureCollection);
 
   return (
     <BaseMap>
