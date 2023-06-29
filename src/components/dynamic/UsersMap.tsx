@@ -5,16 +5,19 @@ import { GeoJSON } from "react-leaflet";
 import BaseMap from "./BaseMap";
 import User from "@/interfaces/User";
 
-const pointStyle = {
-  color: "#ff0000",
-  weight: 3,
+const featureStyle = {
+  color: "#0000ff",
+  weight: 2,
   opacity: 0.9,
-  fillOpacity: 0,
+  fillOpacity: 0.3,
 };
 
 const PartnersMap = ({ users }: { users: User[] }) => {
   const tooltipOnEachFeature = (feature: Feature, layer: Layer) => {
-    layer.bindTooltip(`${feature?.properties?.name}`, { direction: "center" });
+    layer.bindTooltip(
+      `${feature?.properties?.name} (${feature?.properties?.type})`,
+      { direction: "center" }
+    );
   };
 
   const pointToLayer = (feature: Feature<Point>, latLng: LatLng) =>
@@ -39,11 +42,13 @@ const PartnersMap = ({ users }: { users: User[] }) => {
     features: usersAsFeatures,
   };
 
+  console.log(usersFeatureCollection);
+
   return (
     <BaseMap>
       <GeoJSON
         data={usersFeatureCollection}
-        style={pointStyle}
+        style={featureStyle}
         onEachFeature={tooltipOnEachFeature}
         pointToLayer={pointToLayer}
       />
