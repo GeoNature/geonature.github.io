@@ -1,5 +1,5 @@
 ---
 name: Ministère de la Transition Ecologique
 type: Autre
-geometryName: Ministere de la Transition Ecologique
+geometryName: Ministère de la Transition Ecologique
 ---
