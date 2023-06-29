@@ -2,7 +2,7 @@ type User = {
   slug: string;
   name: string;
   type: string;
-  geometry: string;
+  geometryName: string;
   content: string;
 };
 

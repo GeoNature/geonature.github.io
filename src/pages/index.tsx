@@ -251,7 +251,7 @@ export default function Home({ post, users }: { post: Post; users: User[] }) {
 
 export const getStaticProps = async () => {
   const posts = getAllPosts(["title", "date", "slug", "author", "excerpt"]);
-  const users = getAllUsers(["name", "type", "geometry"]);
+  const users = getAllUsers(["name", "type", "geometryName"]);
 
   return {
     props: { post: posts[0], users: users },
