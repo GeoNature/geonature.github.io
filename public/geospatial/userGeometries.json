@@ -84,6 +84,7 @@
 { "type": "Feature", "properties": { "fid": 76, "name": "Patrinat", "type": "Autres" }, "geometry": { "type": "Point", "coordinates": [ 2.356354011850203, 48.841422462826372 ] } },
 { "type": "Feature", "properties": { "fid": 77, "name": "Ministère de la Transition Ecologique", "type": "Autres" }, "geometry": { "type": "Point", "coordinates": [ 2.240139471777494, 48.894042801315557 ] } },
 { "type": "Feature", "properties": { "fid": 79, "name": "Société Herpétologique de France", "type": "Association" }, "geometry": { "type": "Point", "coordinates": [ 2.356724996052673, 48.843872614323075 ] } },
-{ "type": "Feature", "properties": { "fid": 80, "name": "GRETIA", "type": "Association" }, "geometry": { "type": "Point", "coordinates": [ -1.641416817330642, 48.118386645089039 ] } }
+{ "type": "Feature", "properties": { "fid": 80, "name": "GRETIA", "type": "Association" }, "geometry": { "type": "Point", "coordinates": [ -1.641416817330642, 48.118386645089039 ] } },
+{ "type": "Feature", "properties": { "fid": 81, "name": "Picardie Nature", "type": "Association" }, "geometry": { "type": "Point", "coordinates": [ 2.3113670143402, 49.900803061845579 ] } }
 ]
 }
