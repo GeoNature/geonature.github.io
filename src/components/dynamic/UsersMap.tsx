@@ -14,12 +14,13 @@ const featureStyle = {
   fillOpacity: 0.3,
 };
 
+// Look up the geometry in the GeoJSON based on 'feature.properties.name'
 const getGeometry = (geometryName: string) =>
   userGeometries.features.filter(
     (feature) => feature?.properties?.name === geometryName
   )[0].geometry;
 
-const PartnersMap = ({ users }: { users: User[] }) => {
+const UsersMap = ({ users }: { users: User[] }) => {
   const tooltipOnEachFeature = (feature: Feature, layer: Layer) => {
     layer.bindTooltip(
       `${feature?.properties?.name} (${feature?.properties?.type})`,
@@ -63,4 +64,4 @@ const PartnersMap = ({ users }: { users: User[] }) => {
   );
 };
 
-export default PartnersMap;
+export default UsersMap;

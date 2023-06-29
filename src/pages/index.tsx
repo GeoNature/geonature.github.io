@@ -10,6 +10,7 @@ import Feature from "@/components/presentation/Feature";
 import PartnerCard from "@/components/presentation/PartnerCard";
 import Release from "@/components/dynamic/github/Release";
 import PostPreview from "@/components/posts/PostPreview";
+import UsersTable from "@/components/presentation/UsersTable";
 import { getAllPosts, getAllUsers } from "@/lib/api";
 import Post from "@/interfaces/Post";
 import User from "@/interfaces/User";
@@ -181,14 +182,9 @@ export default function Home({ post, users }: { post: Post; users: User[] }) {
           </div>
         </Section>
         <Section title="Utilisateurs" alternate>
-          <p className="lead">
-            GeoNature est utilisé partout en France. Consultez la{" "}
-            <a href="https://lite.framacalc.org/9efn-geonature-users">
-              liste des utilisateurs
-            </a>{" "}
-            de GeoNature.
-          </p>
+          <p className="lead">GeoNature est utilisé partout en France.</p>
           <UsersMap users={users} />
+          <UsersTable users={users} />
         </Section>
         <Section title="Partenaires">
           <div className="row align-items-center justify-content-center row-cols-md-auto g-3">
