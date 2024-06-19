@@ -51,6 +51,8 @@ const UsersMap = ({ users }: { users: User[] }) => {
     type: "FeatureCollection" as const,
     features: usersAsFeatures,
   };
+  console.log("LAAAAA");
+  console.log(usersFeatureCollection)
 
   return (
     <BaseMap>
