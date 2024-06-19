@@ -52,7 +52,7 @@ const UsersMap = ({ users }: { users: User[] }) => {
     features: usersAsFeatures,
   };
   console.log("LAAAAA");
-  console.log(usersFeatureCollection)
+  console.log(JSON.stringify(usersFeatureCollection))
 
   return (
     <BaseMap>
